@@ -11,23 +11,26 @@
 # Input: nums = [2,7,11,15], target = 9
 # Output: [0,1]
 # Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-sum = list(map(int, input().split()))
-target = list(map(int, input()))
 
-def TwoSum(sum,target):
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+nums = list(map(int,input().split()))#[2,7,11,13]
+target = int(input())# 9
+
+hashMap = {}
+for i in range(len(nums)):
+   hashMap[nums[i]] = i
+   #この時点で[0:2 , 1:7 , 2:11 , 3:13]という辞書が出来上がる
    
-    prevMap = {}
+print(hashMap)
+
+for i in range(len(nums)):
     
-    for i,n in enumerate(sum):
-        diff = target - n
-        if diff in prevMap:
-            result_answer = [prevMap[diff],i]
-            return result_answer
-        prevMap[n] = i
+    conplement = target - nums[i]
+    if conplement in hashMap and hashMap[conplement] != i:
+        print([hashMap[conplement],i])
     
-print(TwoSum(sum,target))
         
         
-    
-
-
+        
