@@ -30,7 +30,8 @@ while i < len(inputRoman):
     else:
         AddedNumber = AddedNumber + roman[inputRoman[i]]
         i += 1
-    print(AddedNumber)
+        
+print(AddedNumber)
 
         
     
