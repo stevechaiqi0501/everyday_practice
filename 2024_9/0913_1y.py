@@ -21,6 +21,7 @@ class Solution(object):
                cur.next = list1
                list1 = list1.next
            
+           
            cur = cur.next
        
        if list1:
