@@ -1,15 +1,19 @@
-input_int = int(input())
+# Input: x = 121
+# Output: true
+# Explanation: 121 reads as 121 from left to right and from right to left.
+# Example 2:
 
-before_int = input_int
-output = 0
+# x = int(input)
+x = 333
 
-if input_int < 0:
-    print("false")
+if x<0:
+    print("False")
 else:
-    while input_int != 0:
-        ones_place = input_int % 10
-        output = output*10 + ones_place
-        input_int //= 10
-        
-        if before_int == output:
-            print("ok")
+    x_str = str(x)
+    int_num = 0
+    for i in range(len(x_str)):
+        digit = x % 10
+        int_num = int_num*10 + digit 
+        digit = digit//10
+        print(int_num)
+print(int_num)
