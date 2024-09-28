@@ -9,6 +9,6 @@ def insertion_sort(arr):
     return arr
 
 # 使用例
-numbers = [12, 11, 13, 5, 6]
+numbers = [11,12,13,5,6]
 sorted_numbers = insertion_sort(numbers)
 print(sorted_numbers)

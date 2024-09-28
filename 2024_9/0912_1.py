@@ -16,7 +16,3 @@ for char in s:
             print(False)
         
 print(not stack)
-
-stack = ["a","b","c","d"]
-print(stack.pop())
-print(stack)
