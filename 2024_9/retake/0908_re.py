@@ -15,22 +15,29 @@
 # class Solution:
 #     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
-nums = list(map(int,input().split()))#[2,7,11,13]
-target = int(input())# 9
-
-hashMap = {}
-for i in range(len(nums)):
-   hashMap[nums[i]] = i
-   #この時点で[7:0 , 7:1 , 11:2 , 13:3]という辞書が出来上がる
-   
-print(hashMap)
-
-for i in range(len(nums)):
+    #     print([hashMap[conplement],i])
     
-    conplement = target - nums[i]
-    if conplement in hashMap and hashMap[conplement] != i:
-        print([hashMap[conplement],i])
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        init_dict = {}
+        for i in range(len(nums)):
+            init_dict[nums[i]] = i
+            
+        for i in range(len(nums)):
+            com = target - nums[i]
+            
+            if com in init_dict and init_dict[com] != i:
+                return [i,init_dict[com]]
+
+            
+        
+        
+        
+        
+
+
     
-        
-        
-        
+    
+    
+

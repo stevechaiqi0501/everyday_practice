@@ -14,5 +14,6 @@ for char in s:
     elif char in mapping.keys():
         if not stack or mapping[char] != stack.pop():
             print(False)
+            break
         
 print(not stack)

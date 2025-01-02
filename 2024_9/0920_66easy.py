@@ -17,4 +17,4 @@ for i in range(len(result_numsStr)):
     
 print(reversed_result)
 
-#絶対もっとスマートな方法あるって
+#絶対もっと賢い方法あるって
